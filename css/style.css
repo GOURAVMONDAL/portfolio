@@ -1,0 +1,120 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+:root{
+    --color-primary:#7F5AF0;
+    --color-secondary:#2CB67D;
+    --color-black-1:#16161A;
+    --color-black-2:#72757E;
+    --color-black-3:#94A1B2;
+    --color-black-4:#18181C;
+    --color-white:#ffffff;
+    --font-raleway:'Raleway', sans-serif;
+    --font-roboto:'Roboto Mono', monospace;
+    --font-mons:'Raleway', sans-serif;
+}
+
+html{
+    font-size:10px;
+    font-weight:400;
+    font-family:var(--font-mons);
+}
+
+body{
+    background-color: var(--color-black-1);
+}
+
+.nav-item{
+    font-size:2.1rem;
+    font-weight:300;
+    letter-spacing:1px;
+    padding:10px 20px;
+}
+
+a.nav-link{
+    color:var(--color-white);
+}
+
+div.content-box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:80%;
+    text-align: center;
+}
+
+.my-name{
+    font-weight:700;
+    font-size:7rem;
+    letter-spacing: 2px;
+    color:var(--color-white);
+}
+
+h3.my-desc{
+    font-size:3.5rem;
+    color:var(--color-white);
+    font-weight:300;
+    margin-top:2rem;
+}
+
+/* ============================loader============================ */
+
+.lines{
+    width:100%;
+    height:100vh;
+    background-color: transparent;
+    pointer-events: none;
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:0;
+    margin:0;
+    z-index:11;
+}
+
+.line{
+    width:100%;
+    height:20vh;
+    background-color: #fff;
+    transform:scaleX(0);
+}
+
+.Typewriter__cursor{
+    animation:none!important;
+}
+
+/* ==========================SOCIAL MEDIA ICON ========================== */
+
+.socials{
+    position:absolute;
+    bottom:30px;
+    right:30px;
+    display:flex;
+    flex-direction: column;
+}
+
+.socials > a{
+    color:var(--color-black-3);
+    text-decoration: none;
+    font-size:1.8rem;
+    margin-bottom:10px;
+}
+
+.socials > a:hover{
+    color:var(--color-black-2);
+}
+
+
+@media(max-width:820px) {
+    .my-name{
+        font-size:4rem;
+    }
+    .my-desc{
+        font-size:1.8rem;
+    }
+}
