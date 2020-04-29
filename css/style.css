@@ -26,10 +26,10 @@ body{
 }
 
 .nav-item{
-    font-size:2.1rem;
-    font-weight:300;
+    font-size:1.7rem;
+    font-weight:500;
     letter-spacing:1px;
-    padding:10px 20px;
+    padding:10px 15px;
 }
 
 a.nav-link{
@@ -84,8 +84,57 @@ h3.my-desc{
     transform:scaleX(0);
 }
 
-.Typewriter__cursor{
+.typed-cursor{
     animation:none!important;
+}
+
+.cross-icon{
+    background-color:#000;
+    display:inline-block;
+    width:6rem;
+    height:6rem;
+    border-radius:100%;
+    position:fixed;
+    top:3rem;
+    right:3rem;
+    /* box-shadow:0 .5rem 2rem rgba(255, 0, 0, 0.5); */
+    animation:lighting 3s ease infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+.cross-line::before{
+    content:"";
+    display:block;
+    width:3.5rem;
+    height:1.5px;
+    background:#fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-45deg);
+}
+
+.cross-line::after{
+    content:"";
+    display:block;
+    width:3.5rem;
+    height:1.5px;
+    background:#fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+
+@keyframes lighting{
+    0%{
+        box-shadow:0 .5rem 2rem rgba(44, 182, 125, 0.295);
+    }
+
+    100%{
+        box-shadow:0 .5rem 2rem rgba(44, 182, 125, 0.842);
+    }
 }
 
 /* ==========================SOCIAL MEDIA ICON ========================== */
@@ -117,4 +166,67 @@ h3.my-desc{
     .my-desc{
         font-size:1.8rem;
     }
+}
+
+/* ========================== Portfolio Page ========================== */
+
+
+.portfolio-upper{
+    padding-top:100px;
+}
+
+.portfolio__heading{
+    padding-bottom:5px;
+}
+
+.portfolio__details{
+    font-size:1.5rem;
+    font-weight:400;
+    color:var(--color-black-3);
+    letter-spacing:1px;
+    
+}
+
+.portfolio__menu ul{
+    list-style:none;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:0;
+}
+
+.portfolio__menu ul >li {
+    color:#fff;
+    font-size:1.6rem;
+    padding:2px;
+    margin:10px 20px;
+    line-height:1.3;
+    /* border-bottom:1px solid #fff; */
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio__menu ul > li::before{
+    content:"";
+    background-color:#2CB67D;
+    position:absolute;
+    bottom:-2px;
+    left:0;
+    width:100%;
+    height:2px;
+    transform:scaleX(0);
+    transition:.3s;
+    transform-origin: left;
+}
+
+
+
+.portfolio__menu ul > li:hover::before{
+    transform:scaleX(1);
+    transform-origin: right;
+}
+
+.portfolio__menu ul li.active{
+    border-bottom:2px solid #2CB67D;
+    
 }

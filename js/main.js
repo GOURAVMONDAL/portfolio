@@ -27,21 +27,19 @@ barba.init({
         },
         async enter(data){
             // contentAnimation();
-            new Typewriter('.typing', {
-                strings: ['Web Designer', 'Web Developer','Freelancer'],
-                autoStart: true,
-                loop:true,
-              });
+            
             
         },
         async once(data){
             // contentAnimation();
-        }
+            
+        },
+        debug:true,
+        
     }]
 })
 
-new Typewriter('.typing', {
-    strings: ['Web Designer', 'Web Developer','Freelancer'],
-    autoStart: true,
-    loop:true,
-  });
+
+
+// Isotope gallery
+
