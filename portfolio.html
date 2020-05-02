@@ -21,10 +21,31 @@
   </ul>
   
    <main data-barba="container" data-barba-namespace="portfolio">
-     <a href="index.html" class="cross-icon">
+    <div class="nav">
+      <a href="#" class="nav-logo">
+        <img src="img/logo.png" class="img-fluid" alt="">
+      </a>
+      <input onclick="navAnimation()" type="checkbox" name="checkbox" id="check">
+      <label class="nav-menu-close" for="check">
+        <span class="menu-bar-line"></span>
+      </label>
+      <div class="nav-menu">
+        
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+     <!-- <a href="index.html" class="cross-icon">
        <span class="cross-line"></span>
        <span class="cross-line"></span>
-     </a>
+     </a> -->
       <div class="container">
           <div class="portfolio-upper">
             <h1 class="display-1 text-white portfolio-heading">Portfolio</h1>
@@ -42,7 +63,7 @@
               <div class="col-lg-6 col-md-6 col-sm-12 html">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
-                    <img src="img/xd-1.jpg" class="img-fluid" alt="">
+                    <img src="img/html-1.jpg" class="img-fluid" alt="">
                   </div>
                   <div class="portfolio-content">
                     <p>Adobe XD</p>
@@ -162,5 +183,33 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha256-+izcH23qgte+aiGZRxk63BxGUyoQrAQZVoH2zKU9usM=" crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // isotope gallery
+
+$('.grid').isotope({
+
+})
+
+$('.portfolio-filter').on('click','li',function(){
+    var filterValue = $(this).attr('data-filter');
+    $('.grid').isotope({filter:filterValue});
+})
+
+$('.portfolio-filter ul li').on('click',function() {
+    $('.portfolio-filter ul li').removeClass('active');
+    $(this).addClass('active');
+})
+
+$(document).ready(function(){
+    $(document).scroll(function(){
+        var scrolltop = $(this).scrollTop();
+        if(scrolltop > 100){
+            $('.cross-icon').css("transform","scale(0)")
+        } else{
+            $('.cross-icon').css("transform","scale(1)")
+        }
+    })
+})
+    </script>
 </body>
 </html>

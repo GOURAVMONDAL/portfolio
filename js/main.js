@@ -1,26 +1,14 @@
-// isotope gallery
 
-$('.grid').isotope({
+// nav-menu gsap animation
 
-})
+var checkbox = document.querySelector('#check');
 
-$('.portfolio-filter').on('click','li',function(){
-    var filterValue = $(this).attr('data-filter');
-    $('.grid').isotope({filter:filterValue});
-})
+function navAnimation() {
+    if(checkbox.checked == true) {
+        gsap.to('.nav-menu',{x:0,duration:.6,delay:.2,ease:Expo.easeOut})
+    }else{
+        gsap.to('.nav-menu',{x:"100%",duration:.6,ease:Expo.easeOut})
+    }
+}
 
-$('.portfolio-filter ul li').on('click',function() {
-    $('.portfolio-filter ul li').removeClass('active');
-    $(this).addClass('active');
-})
 
-$(document).ready(function(){
-    $(document).scroll(function(){
-        var scrolltop = $(this).scrollTop();
-        if(scrolltop > 100){
-            $('.cross-icon').css("transform","scale(0)")
-        } else{
-            $('.cross-icon').css("transform","scale(1)")
-        }
-    })
-})
