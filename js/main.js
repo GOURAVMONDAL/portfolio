@@ -1,59 +1,26 @@
+// isotope gallery
 
+$('.grid').isotope({
 
-// loader animation
-
-function pageTransition() {
-    var tl = gsap.timeline();
-    tl.to('ul.lines .line',{duration:.6,scaleX:1,ease:'Power3.out',transformOrigin:'left',stagger:'.2'});
-    tl.to('ul.lines .line',{duration:.6,scaleX:0,ease:'Power3.out',transformOrigin:'right',stagger:'.1',delay:.1});
-}
-
-function delay(n) {
-    n = n || 2000;
-    return new Promise(done => {
-        setTimeout(() => {
-            done();
-        },n)
-    })
-}
-
-barba.init({
-    sync:true,
-    transitions:[{
-        async leave(){
-            // const done = this.async();
-            pageTransition();
-            await delay(1000);
-        },
-        async enter(data){
-            // contentAnimation();
-            
-            
-        },
-        async once(data){
-            // contentAnimation();
-            
-        },
-        debug:true,
-        
-    }]
 })
 
-
-
-// Isotope gallery
-
-
-
-var $grid = $('.portfolio__item').isotope({
-    itemSelector:'.item',
-    layoutMode:'fitRows'
-})
-
-$('.filter-button-group').on('click','li', function() {
+$('.portfolio-filter').on('click','li',function(){
     var filterValue = $(this).attr('data-filter');
-    $grid.isotope({filter:filterValue});
+    $('.grid').isotope({filter:filterValue});
+})
 
-    $('.filter-button-group li').removeClass('active');
+$('.portfolio-filter ul li').on('click',function() {
+    $('.portfolio-filter ul li').removeClass('active');
     $(this).addClass('active');
+})
+
+$(document).ready(function(){
+    $(document).scroll(function(){
+        var scrolltop = $(this).scrollTop();
+        if(scrolltop > 100){
+            $('.cross-icon').css("transform","scale(0)")
+        } else{
+            $('.cross-icon').css("transform","scale(1)")
+        }
+    })
 })
