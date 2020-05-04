@@ -186,10 +186,9 @@
     <script>
       // isotope gallery
 
-$('.grid').isotope({
-  itemSelector:'.grid-item',
-  layoutMode:'masonry',
-})
+
+
+
 
 $('.portfolio-filter').on('click','li',function(){
     var filterValue = $(this).attr('data-filter');
@@ -204,10 +203,10 @@ $('.portfolio-filter ul li').on('click',function() {
 $(document).ready(function(){
     $(document).scroll(function(){
         var scrolltop = $(this).scrollTop();
-        if(scrolltop > 100){
-            $('.cross-icon').css("transform","scale(0)")
+        if(scrolltop > 1){
+            $('.nav-menu-close').css("transform","scale(0)")
         } else{
-            $('.cross-icon').css("transform","scale(1)")
+            $('.nav-menu-close').css("transform","scale(1)")
         }
     })
 })

@@ -81,6 +81,7 @@ label.nav-menu-close{
     border:1px solid #ccc;
     border-radius:100px;
     z-index:11;
+    transition:.5s;
 }
 
 .menu-bar-line{
@@ -357,8 +358,6 @@ h3.my-desc{
     margin-bottom:30px;
     overflow: hidden;
     cursor: pointer;
-    width:100%!important;
-    height:100%!important;
 }
 
 .portfolio-content{
