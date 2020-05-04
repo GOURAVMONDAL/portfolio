@@ -43,16 +43,6 @@ barba.init({
                 backSpeed:100,
             
               });
-        },
-        before(data){
-            new Typed('.typing', {
-                strings: ['Web Designer', 'Web Developer','Freelancer'],
-                autoStart: true,
-                loop:true,
-                typeSpeed:100,
-                backSpeed:100,
-            
-              });
         }
     },{
         namespace:'contact',
