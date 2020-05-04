@@ -60,7 +60,7 @@
               </ul>
             </div>
             <div class="grid row">
-              <div class="col-lg-6 col-md-6 col-sm-12 html">
+              <div class="col-lg-6 col-md-6 col-sm-12 html grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/html-1.jpg" class="img-fluid" alt="">
@@ -71,7 +71,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 xd">
+              <div class="col-lg-6 col-md-6 col-sm-12 xd grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -82,7 +82,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 photoshop">
+              <div class="col-lg-6 col-md-6 col-sm-12 photoshop grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -93,7 +93,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 html">
+              <div class="col-lg-6 col-md-6 col-sm-12 html grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -104,7 +104,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 photoshop">
+              <div class="col-lg-6 col-md-6 col-sm-12 photoshop grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -115,7 +115,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 html">
+              <div class="col-lg-6 col-md-6 col-sm-12 html grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -126,7 +126,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 photoshop">
+              <div class="col-lg-6 col-md-6 col-sm-12 photoshop grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -137,7 +137,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 xd">
+              <div class="col-lg-6 col-md-6 col-sm-12 xd grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-2.jpg" class="img-fluid" alt="">
@@ -148,7 +148,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-lg-6 col-md-6 col-sm-12 grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-1.jpg" class="img-fluid" alt="">
@@ -159,7 +159,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 xd">
+              <div class="col-lg-6 col-md-6 col-sm-12 xd grid-item">
                 <div class="portfolio-cover">
                   <div class="portfolio-img">
                     <img src="img/xd-3.jpg" class="img-fluid" alt="">
@@ -187,6 +187,7 @@
       // isotope gallery
 
 $('.grid').isotope({
+  itemSelector:'.grid-item',
   layoutMode:'masonry',
 })
 
