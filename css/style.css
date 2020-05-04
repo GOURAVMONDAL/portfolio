@@ -267,7 +267,7 @@ h3.my-desc{
 .socials > a{
     color:var(--color-black-3);
     text-decoration: none;
-    font-size:1.8rem;
+    font-size:18px;
     margin-bottom:10px;
 }
 
@@ -280,8 +280,9 @@ h3.my-desc{
     .my-name{
         font-size:4rem;
     }
-    .my-desc{
+    h3.my-desc{
         font-size:1.8rem;
+        margin-top:1.2rem;
     }
 }
 
@@ -403,7 +404,7 @@ h3.my-desc{
     color:#f9f9f9;
     font-size:2.2rem;
     font-weight:500;
-    margin-bottom:40px;
+    margin-bottom:30px;
 }
 
 input.form-control,
@@ -538,7 +539,25 @@ button.send:active{
 
 
 
+/* RESPONSIVE CSS */
 
+@media(max-width:600px) {
+    html{
+        font-size:8px;
+    }
+    .my-name{
+        font-size:3rem;
+    }
+    h3.my-desc{
+        font-size:1.8rem;
+        margin-top:1rem;
+    }
 
+    .nav-logo img{
+        width:70px;
+        height:70px;
+    }
 
+    
+}
 
