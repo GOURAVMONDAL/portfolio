@@ -11,4 +11,7 @@ function navAnimation() {
     }
 }
 
-// barba.init()
+function loadAnimation(){
+    gsap.to('.lines .line',{scaleX:1,transformOrigin:'left',duration:1,stagger:.2,})
+    gsap.to('.lines .line',{scaleX:0,transformOrigin:'right',duration:1,stagger:.2,delay:1})
+}
