@@ -70,3 +70,15 @@ barba.init({
         }
     }]
 })
+
+
+$(window).on('load',function(){
+    gsap.to('.loading',{opacity:0,display:'none',delay:.5})
+    gsap.to('.loader',{width:0,delay:1})
+})
+
+
+
+
+
+
