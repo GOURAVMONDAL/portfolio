@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha256-+izcH23qgte+aiGZRxk63BxGUyoQrAQZVoH2zKU9usM=" crossorigin="anonymous"></script>
 </head>
@@ -28,7 +29,7 @@
       <a href="#" class="nav-logo">
         <img src="img/logo.png" class="img-fluid" alt="">
       </a>
-      <input onclick="navAnimation()" type="checkbox" name="checkbox" id="check">
+      <input type="checkbox" name="checkbox" id="check">
       <label class="nav-menu-close" for="check">
         <span class="menu-bar-line"></span>
       </label>
@@ -69,8 +70,8 @@
                     <img src="img/html-1.jpg" class="img-fluid" alt="">
                   </div>
                   <div class="portfolio-content">
-                    <p>Adobe XD</p>
-                    <a href="#">View</a>
+                    <p>Html css website</p>
+                    <a href="#" class="s" id="some-button">View</a>
                   </div>
                 </div>
               </div>
@@ -185,11 +186,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha256-+izcH23qgte+aiGZRxk63BxGUyoQrAQZVoH2zKU9usM=" crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+      $('#some-button').magnificPopup({
+        items:{
+          src:'img/portfolio-1.jpg'
+        },
+        type:'image',
+      })
+
       // isotope gallery
-
-
 
 
 $('.portfolio-filter').on('click','li',function(){
