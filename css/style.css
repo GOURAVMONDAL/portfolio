@@ -59,7 +59,6 @@ div.nav-menu{
     z-index:2;
     transform:translateX(100%);
     transition:.3s;
-    /* opacity:0; */
 }
 
 input#check:checked + .nav-menu-close + div.nav-menu{
