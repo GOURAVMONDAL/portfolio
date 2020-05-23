@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb {
 div.nav-menu{
     height:100vh;
     width:50rem;
-    background:#fff;
+    background:#2f2f2f;
     position:fixed;
     right:0;
     z-index:2;
@@ -77,13 +77,13 @@ input#check:checked + .nav-menu-close + div.nav-menu{
 }
 
 label.nav-menu-close{
-    position:absolute;
+    position:fixed;
     top:3rem;
     right:2rem;
     width:6rem;
     height:6rem;
     cursor:pointer;
-    border:1px solid #ccc;
+    border:1px solid #fff;
     border-radius:100px;
     z-index:11;
     transition:.5s;
@@ -92,7 +92,7 @@ label.nav-menu-close{
 .menu-bar-line{
     width:3.3rem;
     height:2px;
-    background-color: #3d3d3d;
+    background-color: #fff;
     display:block;
     position: relative;
     top:50%;
@@ -119,7 +119,7 @@ label.nav-menu-close{
     display:block;
     width:100%;
     height:100%;
-    background-color:#3d3d3d;
+    background-color:#fff;
     transition: .3s;
 }
 
@@ -145,7 +145,7 @@ div.nav-menu ul{
 
 div.nav-menu ul li a{
     font-size:3rem;
-    color:#3d3d3d;
+    color:#fff;
     font-weight:300;
     font-family: var(--font-mons);
     text-align: center;
